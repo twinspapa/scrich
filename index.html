@@ -60,7 +60,7 @@
     <div class="intro">
       <!-- 인트로 이미지 삽입 -->
       <!-- <img src="" alt=""> -->
-      <video width="320" height="480" autoplay loop>
+      <video id="intro_video" width="320" height="480" autoplay muted="muted" loop>
         <source src="sample02.mp4" type="video/webm">
       </video>
     </div>
@@ -72,7 +72,7 @@
     <div class="ending" onclick="window.open('https://scrich.page.link/uac5')">
       <!-- 엔딩 이미지 삽입 -->
       <!-- <img src="" alt=""> -->
-      <video width="320" height="480" autoplay loop>
+      <video width="320" height="480" autoplay muted="muted" loop>
         <source src="sample02.mp4" type="video/webm">
       </video>
     </div>
@@ -80,12 +80,15 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+$(document).ready(function () {
+  $('html').css({'cursor':'url(cursor.png), auto'});
+});
+
 // 클릭시 인트로 제거
 $('.intro').click(function() {
   $(this).addClass('hide');
 });
 
-$('html').css({'cursor':'url(cursor.png), auto'});
 (function() {
 
   'use strict';
